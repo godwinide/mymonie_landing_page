@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+i{
+    color: rgb(17, 16, 16);
+    font-size: 1.3em;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    width: 100vw;
+    box-shadow: 3px 3px 5px #000;
+}
+
+/* menu bar */
+.bars{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 4px;
+    box-shadow: 3px 3px 7px #000;
+    cursor: pointer;
+}
+
+.crossbar > div:nth-child(1){
+    transform: rotate(45deg);
+    margin-top: 1em;
+}
+
+.crossbar > div:nth-child(2){
+    margin-bottom: 1.4em;
+    transform: rotate(-45deg);
+}
+
+.crossbar > div:nth-child(3){
+    display: none;
+}
+
+.bars > div{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    height: 2px;
+    background: #fff;
+}
+
+header .brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+}
+
+header .brand a{
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: 'Abril Fatface', cursive;
+    text-transform: capitalize;
+    padding: 7px;
+    text-align: center;
+    text-decoration: none;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+    list-style: none;
+    height: 5rem;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    transition: .4s ease;
+}
+
+header ul a:hover{
+    color: rgb(255, 51, 0);
+}
+
+.auth-btn {
+    color: gold;
+}
+
+
+.main-banner{
+    background: url(./bg.jpg);
+    background-size: cover;
+    background-position:center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.main-banner .showcase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.main-banner h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-shadow: 2px 3px 4px #000;
+}
+
+.main-banner h3{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: gold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-banner .action-btn{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1.5px solid #fff;
+    padding: 5px;
+    display: block;
+    margin: 2em 0 0 1em;
+    max-width: 40%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    transition: .7s ease;
+}
+
+.main-banner .action-btn:hover{
+    background: #fff;
+    color: gray;
+    padding: 8px;
+}
+
+
+section{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section h2{
+    border-bottom: 3px solid rgb(255, 51, 0);
+    margin-bottom: 15px;
+}
+
+.about{
+    background-color: rgb(11, 80, 39);
+    color: #fff;
+}
+
+.about h2{
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    padding: 10px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about .content{
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.6em;
+    text-align: center;
+    color: rgb(182, 180, 180);
+
+}
+
+
+.contact{
+    background: rgb(44, 70, 71);
+}
+
+.contact h2{
+    font-size: 1.8em;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact .content{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+.contact .content ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    list-style: none;
+    padding: 10px;
+}
+
+.contact .content ul li{
+    margin-top: 1em;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hide-desktop{
+    display: none;
+}
+
+@media screen and (min-width:800px){
+    .bars{
+        display: none;
+        width: 0;
+    }
+}
+
+
+/* mobile */
+@media screen and (max-width:800px){
+    i{
+        color: rgb(17, 16, 16);
+        font-size: 1em;
+    }
+    section{
+        min-height: 40vh !important;
+    }
+
+    .about h2{
+        font-size: 1.3em;
+        text-align: center;
+        color: #fff;
+        padding: 10px auto;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .about .content{
+        width:95%;
+        margin: 0 auto;
+        font-size: 1em;
+        text-align: center;
+        color: rgb(182, 180, 180);
+        font-weight: bold;
+    }
+
+    .contact{
+        background: rgb(44, 70, 71);
+    }
+
+    .contact h2{
+        font-size: 1.3em;
+        color: #fff;
+    }
+
+    .contact h4{
+        font-size: .7em;
+    }
+
+    .contact .content{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .contact .content ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+        list-style: none;
+        padding: 10px;
+    }
+
+    .contact .content ul li{
+        margin-top: 1em;
+        display: block;
+        font-size: .7em !important;
+    }
+
+    .brand{
+        display: flex;
+        justify-content: center;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .hide-desktop{
+        display: unset;
+    }
+
+    .show-desktop{
+        display: none;
+    }
+
+    ul.hide-desktop{
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background: lightgray;
+        color: #000;
+        box-shadow: -3px -3px 6px #000;
+        width: 0;
+        overflow: hidden;
+        transition: .4s ease;
+    }
+
+    ul.open-menu{
+        width: 50%;
+    }
+
+    ul.hide-desktop a{
+        color: #000;
+        font-size: 1.2em;
+        display: block;
+        width: 100%;
+        text-align: center;
+        transition: .4s ease;
+    }
+    ul.hide-desktop a:nth-child(1){
+        margin-top: 20px;
+    }
+
+    .main-banner h1{
+        font-size: 2em;
+        margin-top: 3em;
+    }
+
+    .main-banner h2{
+        font-size: 1.5em;
+    }
+
+    .main-banner h3{
+        font-size: 1.2em;
+    }
+
+    .main-banner{
+        grid-template-columns: 100%;
+    }
+
+    .main-banner .action-btn{
+        font-size: 1em;
+    }
+
+}
